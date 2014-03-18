@@ -20,9 +20,12 @@ module.exports = function(grunt) {
 
     imagemin: {                          // Task
       dynamic: {                         // Another target
+        options: {
+          cache: false
+        },
         files: [{
           expand: true,                  // Enable dynamic expansion
-          cwd: 'img/',                   // Src matches are relative to this path
+          cwd: 'img/prebuild',                   // Src matches are relative to this path
           src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
           dest: 'img/build/'                  // Destination path prefix
         }]

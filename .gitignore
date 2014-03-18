@@ -6,6 +6,10 @@ _site/
 .DS_Store
 node_modules/
 css/.DS_Store
-img/
 favicon.ico
 apple-touch-icon-precomposed.png
+
+#Uncomment the folders below; keep img/built/ if using Jekyll
+img/
+img/built/
+img/prebuild/
