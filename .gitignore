@@ -1,15 +1,8 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
-_site/
 .sass-cache/
 .DS_Store
 node_modules/
 css/.DS_Store
-favicon.ico
-apple-touch-icon-precomposed.png
 
-#Uncomment the folders below; keep img/built/ if using Jekyll
-img/
-img/built/
-img/prebuild/
