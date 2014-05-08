@@ -1,11 +1,20 @@
-@import 'variables';
-@import 'base-fonts';
-@import 'mediaqueries';
+@import 'helpers/variables';
+@import 'base/base-fonts';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'layout/mediaqueries';
 
-@import 'grid';
-@import 'module';
-@import 'components';
+@import 'layout/grid';
+@import 'components/module';
+@import 'components/components';
 
-@import 'header';
-@import 'navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+@import 'components/navigation';
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/dropdown';
 
