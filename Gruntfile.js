@@ -51,6 +51,10 @@ module.exports = function(grunt) {
       },
     },
 
+    connect: {
+      uses_defaults: {}
+    },
+
     watch: {
       scripts: {
         files: ['js/main.js', 'js/plugins/*.js'],
@@ -84,10 +88,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task(s).
   // Need to manually run imagemin
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'watch']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'connect', 'watch']);
  
 
 };
