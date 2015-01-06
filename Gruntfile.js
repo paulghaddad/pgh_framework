@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
+
     concat: {
       dist: {
         src: ['js/main.js', 'js/plugins/*.js'],
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             src: 'js/build/production.js',
             dest: 'js/build/production.min.js'
         }
-    }, 
+    },
 
     imagemin: {                          // Task
       dynamic: {                         // Another target
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {                         // Dictionary of files
-          'css/main_unprefixed.css': 'sass/styles.scss'      // 'destination': 'source'
+          'css/build/main_unprefixed.css': 'sass/styles.scss'      // 'destination': 'source'
         }
       }
     },
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     autoprefixer: {
 
       single_file: {
-        src: 'css/main_unprefixed.css',
+        src: 'css/build/main_unprefixed.css',
         dest: 'css/build/main.css'
       },
     },
@@ -93,6 +93,6 @@ module.exports = function(grunt) {
   // Default task(s).
   // Need to manually run imagemin
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'connect', 'watch']);
- 
+
 
 };
